@@ -26,6 +26,13 @@ struct MissionView: View {
                         .frame(maxWidth: geomentry.size.width * 0.6)
                         .padding(.top)
                     
+                    VStack{
+                        Text(mission.formattedLaundDate)
+                            .foregroundColor(.secondary)
+                            .padding(.top)
+                            .font(.title)
+                    }
+                    
                     VStack(alignment: .leading){
                         Rectangle()
                             .frame(height: 2)
