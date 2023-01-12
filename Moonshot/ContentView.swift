@@ -8,12 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var listGridToggle = "list.dash"
+    @State private var isShowingGrid = true
+    @State private var columns = [
+        GridItem(.adaptive(minimum: 150))
+    ]
+    
     let astraunts : [String: Astronaut] = Bundle.main.decode("astronauts.json")
     let missions : [Mission] = Bundle.main.decode("missions.json")
     
-    let columns = [
+    let SFListSymbol = "list.dash"
+    let SFGridSymbol = "square.grid.2x2"
+    
+    let gridColumn = [
         GridItem(.adaptive(minimum: 150))
-    ]
+        ]
+    let listColumn = [
+        GridItem(.flexible(minimum: 100, maximum: .infinity))
+        ]
     
     var body: some View {
         NavigationView{
@@ -23,30 +35,11 @@ struct ContentView: View {
                         NavigationLink{
                             MissionView(mission: mission, astronauts: astraunts)
                         } label: {
-                            VStack{
-                                Image(mission.image)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 100, height: 100)
-                                    .padding()
-                                
-                                VStack {
-                                    Text(mission.displayName)
-                                        .font(.headline)
-                                        .foregroundColor(.white)
-                                    Text(mission.formattedLaundDate)
-                                        .font(.caption)
-                                        .foregroundColor(.white.opacity(0.5))
-                                }
-                                .padding(.vertical)
-                                .frame(maxWidth: .infinity)
-                                .background(.lightBackground)
+                            if (isShowingGrid){
+                                MissionGridView(mission: mission)
+                            } else {
+                                MissionListView(mission: mission)
                             }
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(.lightBackground)
-                            )
                         }
                     }
                 }
@@ -55,6 +48,25 @@ struct ContentView: View {
             .navigationTitle("MoonShot")
             .background(.darkBackground)
             .preferredColorScheme(.dark)
+            .toolbar(){
+                Button(){
+                    toggleListGrid()
+                } label: {
+                    Image(systemName: "\(listGridToggle)")
+                        .foregroundColor(.white)
+                }
+            }
+        }
+    }
+    
+    func toggleListGrid(){
+        isShowingGrid.toggle()
+        if isShowingGrid{
+            columns = gridColumn
+            listGridToggle = SFListSymbol
+        } else {
+            columns = listColumn
+            listGridToggle = SFGridSymbol
         }
     }
 }

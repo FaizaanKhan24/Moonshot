@@ -21,6 +21,8 @@
 		89A52D66296EC83900D61F07 /* AstronautView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A52D65296EC83900D61F07 /* AstronautView.swift */; };
 		89A52D6A296F072900D61F07 /* CrewLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A52D69296F072900D61F07 /* CrewLabelView.swift */; };
 		89A52D6C296F0C1500D61F07 /* StackDividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A52D6B296F0C1500D61F07 /* StackDividerView.swift */; };
+		89A52D6E29702A6B00D61F07 /* MissionGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A52D6D29702A6B00D61F07 /* MissionGridView.swift */; };
+		89A52D7029702B4600D61F07 /* MissionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A52D6F29702B4600D61F07 /* MissionListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		89A52D65296EC83900D61F07 /* AstronautView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautView.swift; sourceTree = "<group>"; };
 		89A52D69296F072900D61F07 /* CrewLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewLabelView.swift; sourceTree = "<group>"; };
 		89A52D6B296F0C1500D61F07 /* StackDividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackDividerView.swift; sourceTree = "<group>"; };
+		89A52D6D29702A6B00D61F07 /* MissionGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionGridView.swift; sourceTree = "<group>"; };
+		89A52D6F29702B4600D61F07 /* MissionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 			children = (
 				89A52D47296EB10700D61F07 /* MoonshotApp.swift */,
 				89A52D49296EB10700D61F07 /* ContentView.swift */,
+				89A52D6F29702B4600D61F07 /* MissionListView.swift */,
+				89A52D6D29702A6B00D61F07 /* MissionGridView.swift */,
 				89A52D65296EC83900D61F07 /* AstronautView.swift */,
 				89A52D63296EBFF100D61F07 /* MissionView.swift */,
 				89A52D6B296F0C1500D61F07 /* StackDividerView.swift */,
@@ -173,6 +179,8 @@
 				89A52D6C296F0C1500D61F07 /* StackDividerView.swift in Sources */,
 				89A52D5C296EB20700D61F07 /* Astronaut.swift in Sources */,
 				89A52D66296EC83900D61F07 /* AstronautView.swift in Sources */,
+				89A52D6E29702A6B00D61F07 /* MissionGridView.swift in Sources */,
+				89A52D7029702B4600D61F07 /* MissionListView.swift in Sources */,
 				89A52D62296EBC9A00D61F07 /* Color-Theme.swift in Sources */,
 				89A52D4A296EB10700D61F07 /* ContentView.swift in Sources */,
 				89A52D48296EB10700D61F07 /* MoonshotApp.swift in Sources */,
